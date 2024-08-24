@@ -5,7 +5,7 @@ function HeadSection() {
     <div className="w-full sm:h-full h-full rounded-2xl relative overflow-hidden">
       <img
         className="w-full h-full object-cover duration-500 ease-in-out"
-        src="./src/assets/21.jpg"
+        src="./21.jpg"
         alt="Head Section Image"
       />
       <div className="absolute top-0 h-full w-full flex flex-col justify-between p-6">
