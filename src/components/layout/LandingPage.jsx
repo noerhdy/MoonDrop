@@ -71,12 +71,7 @@ function LandingPage() {
 
         {/* HeadSection untuk layar lebih besar */}
         <div className="order-3  sm:order-2 w-full sm:w-1/2 sm:sticky top-0 h-screen sm:py-2 py-0 relative">
-          <ProductSection />
-          {!isMobile && (
-            <div className="absolute top-5 w-full ">
-              <NavbarSection />
-            </div>
-          )}
+          <ProductSection isMobile={isMobile} />
         </div>
       </div>
     </section>

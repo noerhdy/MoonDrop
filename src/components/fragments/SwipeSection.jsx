@@ -1,5 +1,4 @@
 import React from "react";
-import NavbarSection from "./NavbarSection";
 import { Scrollbar, A11y, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -7,24 +6,18 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 const images = [
-  { src: "img/img product/b(1).webp", alt: "Slide 1" },
-  { src: "img/img product/b(2).webp", alt: "Slide 2" },
-  { src: "img/img product/b(3).webp", alt: "Slide 3" },
-  { src: "img/img product/w(2).png", alt: "Slide 4" },
-  { src: "img/img product/w(2).webp", alt: "Slide 5" },
-  { src: "img/img product/w(3).webp", alt: "Slide 6" },
+  { src: "carousel/4.webp", alt: "Slide 1" },
+  { src: "carousel/2.webp", alt: "Slide 2" },
+  { src: "carousel/1.webp", alt: "Slide 3" },
+  { src: "carousel/3.webp", alt: "Slide 4" },
 ];
 
-const ProductSection = ({ isMobile }) => {
+const SwipeSection = () => {
+  const handleClick = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
   return (
-    <div className="w-full sm:h-full h-full rounded-2xl relative border-2 overflow-hidden">
-      {!isMobile && (
-        <div className="absolute top-5 w-full ">
-          <div className="flex flex-col justify-center ">
-            <NavbarSection />
-          </div>
-        </div>
-      )}
+    <>
       <div className="flex justify-center flex-col relative items-center overflow-hidden rounded-2xl">
         <Swiper
           modules={[Scrollbar, A11y, Autoplay]}
@@ -47,15 +40,18 @@ const ProductSection = ({ isMobile }) => {
             </SwiperSlide>
           ))}
         </Swiper>
+        <button
+          onClick={() => handleClick("https://www.instagram.com/Oatside")}
+          className="absolute group bottom-0 w-full  z-[20] flex items-center  ease-in-out duration-500 justify-center sm:rounded-none rounded-xl"
+        >
+          <div className="justify-center flex flex-col w-full py-4 items-center  group-hover:scale-125 group-hover:bg-blue-500/80 group-hover:text-[#fee6e5] ease-in-out duration-500 bg-neutral-800/70 text-white font-semibold text-[1rem] ">
+            <h1>Join Community</h1>
+            <h1>@Oatside</h1>
+          </div>
+        </button>
       </div>
-      <div className="absolute top-0 h-full w-full flex flex-col justify-between p-6">
-        <h2 className="font-semibold text-5xl text-zinc-950"></h2>
-        <h2 className="font-bold text-[2rem] sm:text-7xl text-white">
-          Product Section
-        </h2>
-      </div>
-    </div>
+    </>
   );
 };
 
-export default ProductSection;
+export default SwipeSection;
