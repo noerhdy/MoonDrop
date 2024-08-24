@@ -1,4 +1,5 @@
 import React from "react";
+import ButtonCta from "../elements/button/ButtonCta";
 
 function AboutSection() {
   return (
@@ -15,9 +16,9 @@ function AboutSection() {
         </p>
       </div>
       <div className="   m-4">
-        <button className="px-8 py-2 rounded-full bg-white text-black">
-          learn more
-        </button>
+        <ButtonCta classname="bg-zinc-50 px-8 py-2 rounded-full">
+          hello
+        </ButtonCta>
       </div>
     </div>
   );
