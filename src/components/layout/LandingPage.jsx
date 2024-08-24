@@ -4,6 +4,9 @@ import AboutSection from "../fragments/AboutSection";
 import ProductSection from "../fragments/ProductSection";
 import NavbarSection from "../fragments/NavbarSection";
 
+export const Tagline =
+  "w-full h-full items-center font-bold  text-white flex flex-col  justify-center text-[3rem] sm:text-8xl";
+
 function LandingPage() {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -30,17 +33,16 @@ function LandingPage() {
           {/* Menampilkan elemen ini hanya pada layar desktop */}
           {!isMobile && (
             <div className="h-svh">
-              <div className="bg-blue-500 rounded-2xl h-3/4 mt-2 overflow-hidden">
+              <div className="bg-zinc-500 rounded-2xl h-fit mt-2 overflow-hidden">
                 <AboutSection />
               </div>
               <div className="flex flex-col py-2 gap-2 rounded-2xl h-full">
-                <div className="bg-zinc-900 rounded-2xl h-2/5 overflow-hidden">
-                  <div className="w-full h-full items-start  font-semibold mx-4 text-zinc-200 flex flex-col  justify-center text-8xl">
-                    <h1>MOON</h1>
-                    <h1>DROP</h1>
+                <div className="bg-black rounded-2xl h-2/5 overflow-hidden">
+                  <div className={`${Tagline}`}>
+                    <h1>MOONDROP</h1>
                   </div>
                 </div>
-                <div className="bg-zinc-900 rounded-2xl h-3/5">5</div>
+                <div className="bg-black rounded-2xl h-3/5">5</div>
               </div>
             </div>
           )}
@@ -53,10 +55,16 @@ function LandingPage() {
         )}
         {isMobile && (
           <div className=" order-last  ">
-            <div className="bg-blue-500 rounded-2xl h-1/2 ">About</div>
+            <div className="bg-zinc-500 rounded-2xl h-fit ">
+              <AboutSection />
+            </div>
             <div className="flex flex-col py-2 gap-2 rounded-2xl h-screen ">
-              <div className="bg-yellow-700 rounded-2xl h-2/5">4</div>
-              <div className="bg-yellow-500 rounded-2xl h-3/5">5</div>
+              <div className="bg-black rounded-2xl h-2/5">
+                <div className={`${Tagline}`}>
+                  <h1>MOONDROP</h1>
+                </div>
+              </div>
+              <div className="bg-black rounded-2xl h-3/5">5</div>
             </div>
           </div>
         )}
@@ -65,7 +73,7 @@ function LandingPage() {
         <div className="order-3  sm:order-2 w-full sm:w-1/2 sm:sticky top-0 h-screen sm:py-2 py-0 relative">
           <ProductSection />
           {!isMobile && (
-            <div className="absolute top-5 w-full bg-zinc-100 ">
+            <div className="absolute top-5 w-full ">
               <NavbarSection />
             </div>
           )}

@@ -9,11 +9,13 @@ function HeadSection() {
         alt="Head Section Image"
       />
       <div className="absolute top-0 h-full w-full flex flex-col justify-between p-6">
-        <h2 className="font-semibold text-5xl text-zinc-50">
+        <h2 className="font-semibold text-[1.75rem] sm:text-5xl text-zinc-50">
           Accurate Performance <br />
           Wireless Experience
         </h2>
-        <h2 className="font-bold text-7xl text-zinc-50">MOONDROP</h2>
+        <h2 className="font-bold text-[3rem] sm:text-7xl  text-zinc-50">
+          MOONDROP
+        </h2>
       </div>
     </div>
   );

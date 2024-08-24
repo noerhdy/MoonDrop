@@ -6,7 +6,7 @@ const ButtonCta = (props) => {
   return (
     <button
       onClick={() => handleClick(link)}
-      className={`group flex    ${classname} transition-all duration-400`}
+      className={`group flex px-12 py-2 rounded-full   ${classname} transition-all duration-400`}
     >
       <div className="relative overflow-hidden z-[1] transition-all duration-200 font-semibold text-[1rem]">
         <span className="group-hover:translate-y-full inline-block transition-all duration-500">

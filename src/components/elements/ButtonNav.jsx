@@ -4,7 +4,7 @@ const ButtonNav = (props) => {
   return (
     <button
       onClick={onClick}
-      className="group flex justify-center w-1/2  py-2 items-center bg-transparent text-zinc-600 hover:text-zinc-950 border border-zinc-500 font-semibold text-[1rem] relative overflow-hidden rounded-full transition-all duration-400"
+      className="group flex justify-center w-1/2  py-2 items-center hover:bg-zinc-900 sm:text-zinc-800 text-zinc-200 hover:text-orange-500 font-semibold text-[1rem] relative overflow-hidden rounded-full transition-all duration-400"
     >
       <div className="relative overflow-hidden z-[1] transition-all duration-200">
         <span className="group-hover:translate-y-full inline-block transition-all duration-500">
