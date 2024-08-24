@@ -7,17 +7,17 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 const images = [
-  { src: "img/img product/b(1).webp", alt: "Slide 1" },
-  { src: "img/img product/b(2).webp", alt: "Slide 2" },
-  { src: "img/img product/b(3).webp", alt: "Slide 3" },
-  { src: "img/img product/w(2).png", alt: "Slide 4" },
-  { src: "img/img product/w(2).webp", alt: "Slide 5" },
-  { src: "img/img product/w(3).webp", alt: "Slide 6" },
+  { src: "img/img product/b_1.webp", alt: "Slide 1" },
+  { src: "img/img product/b_2.webp", alt: "Slide 2" },
+  { src: "img/img product/b_3.webp", alt: "Slide 3" },
+  { src: "img/img product/w_1.webp", alt: "Slide 4" },
+  { src: "img/img product/w_2.webp", alt: "Slide 5" },
+  { src: "img/img product/w_3.webp", alt: "Slide 6" },
 ];
 
 const ProductSection = ({ isMobile }) => {
   return (
-    <div className="w-full sm:h-full h-full rounded-2xl relative border-2 overflow-hidden">
+    <div className="w-full sm:h-full h-full rounded-2xl relative  overflow-hidden">
       {!isMobile && (
         <div className="absolute top-5 w-full ">
           <div className="flex flex-col justify-center ">
