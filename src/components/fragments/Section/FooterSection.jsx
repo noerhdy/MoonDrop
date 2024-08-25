@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonCta from "../elements/button/ButtonCta";
+import ButtonCta from "../../elements/button/ButtonCta";
 
 function FooterSection() {
   return (

@@ -1,4 +1,4 @@
-import LandingLayout from "../../components/layout/LandingLayout";
+import MainLayout from "../../components/layout/MainLayout";
 import "../index.css";
 
 function HomePage() {
@@ -6,7 +6,7 @@ function HomePage() {
     <>
       <section>
         <div className="relative">
-          <LandingLayout />
+          <MainLayout />
         </div>
       </section>
     </>

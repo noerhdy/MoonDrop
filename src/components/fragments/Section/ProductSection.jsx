@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import ButtonCta from "../elements/button/ButtonCta";
+import ButtonCta from "../../elements/button/ButtonCta";
 
 const images = [
   { src: "img/img product/b_1.webp", alt: "Slide 1" },
@@ -16,7 +16,7 @@ const images = [
   { src: "img/img product/w_1.webp", alt: "Slide 6" },
 ];
 
-const ProductSection = ({ isMobile }) => {
+const ProductSection = ({ isMobile, children }) => {
   return (
     <div className="w-full sm:h-full h-full rounded-2xl relative  overflow-hidden">
       {!isMobile && (
@@ -54,11 +54,7 @@ const ProductSection = ({ isMobile }) => {
         <h2 className="font-bold text-[2rem] sm:text-7xl text-black">
           {/* Product Section */}
         </h2>
-        <div className="flex justify-end">
-          <ButtonCta classname="px-6  bg-zinc-800 hover:bg-zinc-900  text-zinc-200 hover:text-orange-500">
-            View Details
-          </ButtonCta>
-        </div>
+        <div className="flex justify-end">{children}</div>
       </div>
     </div>
   );
