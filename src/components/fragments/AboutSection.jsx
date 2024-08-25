@@ -15,7 +15,7 @@ function AboutSection() {
           Cancellation (ANC) for an immersive listening experience.
         </p>
         <div className="w-full flex sm:justify-start justify-end pb-2">
-          <ButtonCta classname="bg-zinc-800 hover:bg-zinc-900  text-zinc-200 hover:text-orange-500">
+          <ButtonCta classname="px-12 bg-zinc-800 hover:bg-zinc-900  text-zinc-200 hover:text-orange-500">
             More
           </ButtonCta>
         </div>

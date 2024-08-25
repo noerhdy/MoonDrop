@@ -5,21 +5,22 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import ButtonCta from "../elements/button/ButtonCta";
 
 const images = [
   { src: "img/img product/b_1.webp", alt: "Slide 1" },
-  { src: "img/img product/b_2.webp", alt: "Slide 2" },
-  { src: "img/img product/b_3.webp", alt: "Slide 3" },
-  { src: "img/img product/w_1.webp", alt: "Slide 4" },
-  { src: "img/img product/w_2.webp", alt: "Slide 5" },
-  { src: "img/img product/w_3.webp", alt: "Slide 6" },
+  { src: "img/img product/b_3.webp", alt: "Slide 2" },
+  { src: "img/img product/b_2.webp", alt: "Slide 3" },
+  { src: "img/img product/w_2.webp", alt: "Slide 4" },
+  { src: "img/img product/w_3.webp", alt: "Slide 5" },
+  { src: "img/img product/w_1.webp", alt: "Slide 6" },
 ];
 
 const ProductSection = ({ isMobile }) => {
   return (
     <div className="w-full sm:h-full h-full rounded-2xl relative  overflow-hidden">
       {!isMobile && (
-        <div className="absolute top-5 w-full ">
+        <div className="absolute h-fit top-5  w-full ">
           <div className="flex flex-col justify-center ">
             <NavbarSection />
           </div>
@@ -48,11 +49,16 @@ const ProductSection = ({ isMobile }) => {
           ))}
         </Swiper>
       </div>
-      <div className="absolute top-0 h-full w-full flex flex-col justify-between p-6">
+      <div className="absolute z-20 top-0 h-full w-full flex flex-col justify-between p-6">
         <h2 className="font-semibold text-5xl text-zinc-950"></h2>
-        <h2 className="font-bold text-[2rem] sm:text-7xl text-white">
-          Product Section
+        <h2 className="font-bold text-[2rem] sm:text-7xl text-black">
+          {/* Product Section */}
         </h2>
+        <div className="flex justify-end">
+          <ButtonCta classname="px-6  bg-zinc-800 hover:bg-zinc-900  text-zinc-200 hover:text-orange-500">
+            View Details
+          </ButtonCta>
+        </div>
       </div>
     </div>
   );
