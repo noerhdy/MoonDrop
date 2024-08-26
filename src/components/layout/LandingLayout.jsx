@@ -25,13 +25,13 @@ function LandingLayout() {
     <section className="h-dvh">
       {/* start */}
       <div className="flex flex-col sm:flex-row w-full h-full fixed overflow-auto gap-2 px-2">
-        <div className="order-2 sm:order-2 w-full sm:w-1/2 h-full sm:py-2 py-0 sm:p-0 pt-16">
+        <div className="order-2 sm:order-2 w-full sm:w-1/2 h-full sm:py-2 py-0 ">
           <HeadHome />
 
           {/* Desktop */}
           {!isMobile && (
             <div className="h-screen">
-              <div className="bg-zinc-500 rounded-[1.5rem] h-fit mt-2 overflow-hidden">
+              <div className="bg-zinc-400 rounded-[1.5rem] h-fit mt-2 overflow-hidden">
                 <BodyHome />
               </div>
 
@@ -45,13 +45,13 @@ function LandingLayout() {
 
         {/* Mobile */}
         {isMobile && (
-          <div className=" order-1">
+          <div className=" order-1 sm:mb-0 mb-16">
             <NavbarSection />
           </div>
         )}
         {isMobile && (
           <div className=" order-last  ">
-            <div className="bg-zinc-500 rounded-2xl h-fit ">
+            <div className="bg-zinc-400 rounded-[1.5rem] h-fit ">
               <BodyHome />
             </div>
 

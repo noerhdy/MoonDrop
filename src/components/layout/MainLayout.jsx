@@ -28,7 +28,7 @@ function MainLayout() {
         <Outlet />
         {/* Mobile */}
         {isMobile && (
-          <div className=" order-1">
+          <div className="order-1 mb-12 sm:mb-0">
             <NavbarSection />
           </div>
         )}
@@ -41,7 +41,7 @@ function MainLayout() {
         )}
         {/* end Mobile */}
 
-        <div className="order-3 sm:order-2 w-full sm:w-1/2  sm:sticky top-0 h-1/2 sm:h-screen sm:py-2 py-0 relative sm:p-0 pt-16">
+        <div className="order-3 sm:order-2 w-full sm:w-1/2  sm:sticky top-0 h-1/2 sm:h-screen sm:py-2 py-0 relative ">
           <SideProduct isMobile={isMobile} />
         </div>
       </div>

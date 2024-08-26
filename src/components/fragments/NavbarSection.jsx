@@ -8,13 +8,13 @@ function NavbarSection() {
         <ButtonNav linkPage="/" classname="active-class">
           Home
         </ButtonNav>
-        <ButtonNav linkPage="product" classname="active-class">
+        <ButtonNav linkPage="/product" classname="active-class">
           Product
         </ButtonNav>
-        <ButtonNav linkPage="about" classname="active-class">
+        <ButtonNav linkPage="/about" classname="active-class">
           About Us
         </ButtonNav>
-        <ButtonNav linkPage="/a" classname="active-class">
+        <ButtonNav linkPage="/cart" classname="active-class">
           Cart
         </ButtonNav>
       </div>
