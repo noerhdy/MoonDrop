@@ -14,3 +14,5 @@ function HomePage() {
 }
 
 export default HomePage;
+
+// layout OUTLET for -Product -AboutUs

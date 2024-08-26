@@ -5,7 +5,7 @@ import IndexFooter from "../../components/fragments/Footer/IndexFooter";
 export const Tagline =
   "w-full h-full items-center font-bold  text-white flex flex-col  justify-center text-[3rem] sm:text-8xl overview-hidden";
 
-function ProductPage() {
+function AboutPage() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -40,4 +40,4 @@ function ProductPage() {
   );
 }
 
-export default ProductPage;
+export default AboutPage;

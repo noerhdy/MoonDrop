@@ -1,12 +1,12 @@
 import React from "react";
 
-function HeadSection() {
+function HeadHome() {
   return (
-    <div className="w-full sm:h-full h-full rounded-2xl relative overflow-hidden">
+    <div className="w-full h-full rounded-[1.5rem] relative overflow-hidden">
       <img
-        className="w-full h-full object-cover duration-500 ease-in-out"
+        className="w-full h-dvh object-cover duration-500 ease-in-out"
         src="./21.jpg"
-        alt="Head Section Image"
+        alt="HeadImage"
       />
       <div className="absolute top-0 h-full w-full flex flex-col justify-between p-6">
         <h2 className="font-semibold text-[1.75rem] sm:text-5xl text-zinc-50">
@@ -21,4 +21,4 @@ function HeadSection() {
   );
 }
 
-export default HeadSection;
+export default HeadHome;

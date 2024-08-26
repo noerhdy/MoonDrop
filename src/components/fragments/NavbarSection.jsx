@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonNav from "../../elements/ButtonNav";
+import ButtonNav from "../elements/button/ButtonNav";
 
 function NavbarSection() {
   return (
@@ -11,7 +11,7 @@ function NavbarSection() {
         <ButtonNav linkPage="product" classname="active-class">
           Product
         </ButtonNav>
-        <ButtonNav linkPage="/b" classname="active-class">
+        <ButtonNav linkPage="about" classname="active-class">
           About Us
         </ButtonNav>
         <ButtonNav linkPage="/a" classname="active-class">

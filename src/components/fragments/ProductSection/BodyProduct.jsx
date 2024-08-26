@@ -1,10 +1,10 @@
 import React from "react";
 import ButtonCta from "../../elements/button/ButtonCta";
 
-function AboutSection() {
+function BodyProduct() {
   return (
     <div className=" relative overflow-hidden leading-tight ">
-      <div className="p-[1.1rem] font-semibold h-full text-[1.75rem] sm:text-3xl  text-zinc-50 space-y-10">
+      <div className="p-[1.1rem] font-semibold h-full text-[1rem] sm:text-[2rem]  text-zinc-50 space-y-10">
         <p> The Moondrop Space Travel</p>
         <p>
           TWS earbuds deliver high-resolution audio with Bluetooth V5.3, 13mm
@@ -24,4 +24,4 @@ function AboutSection() {
   );
 }
 
-export default AboutSection;
+export default BodyProduct;

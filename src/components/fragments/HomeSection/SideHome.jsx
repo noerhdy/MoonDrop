@@ -1,11 +1,11 @@
 import React from "react";
-import NavbarSection from "./NavbarSection";
 import { Scrollbar, A11y, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import ButtonCta from "../../elements/button/ButtonCta";
+import NavbarSection from "../NavbarSection";
 
 const images = [
   { src: "img/img product/b_1.webp", alt: "Slide 1" },
@@ -16,7 +16,7 @@ const images = [
   { src: "img/img product/w_1.webp", alt: "Slide 6" },
 ];
 
-const ProductSection = ({ isMobile, children }) => {
+const SideHome = ({ isMobile, children }) => {
   return (
     <div className="w-full sm:h-full h-full rounded-2xl relative  overflow-hidden">
       {!isMobile && (
@@ -60,4 +60,4 @@ const ProductSection = ({ isMobile, children }) => {
   );
 };
 
-export default ProductSection;
+export default SideHome;

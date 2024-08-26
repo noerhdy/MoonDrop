@@ -1,8 +1,8 @@
 import React from "react";
 
-function ProductView() {
+function HeadProduct() {
   return (
-    <div className="w-full sm:h-full h-full rounded-2xl relative overflow-hidden">
+    <div className="w-full sm:h-full h-full rounded-[1.5rem] relative overflow-hidden">
       <img
         className="w-full h-full object-cover duration-500 ease-in-out"
         src="./21.jpg"
@@ -20,4 +20,4 @@ function ProductView() {
   );
 }
 
-export default ProductView;
+export default HeadProduct;
