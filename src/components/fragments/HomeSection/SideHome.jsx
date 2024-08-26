@@ -49,12 +49,12 @@ const SideHome = ({ isMobile, children }) => {
           ))}
         </Swiper>
       </div>
-      <div className="absolute z-20 top-0 h-full w-full flex flex-col justify-between p-6">
+      <div className="absolute top-0 h-full w-full flex flex-col justify-between p-6">
         <h2 className="font-semibold text-5xl text-zinc-950"></h2>
         <h2 className="font-bold text-[2rem] sm:text-7xl text-black">
           {/* Product Section */}
         </h2>
-        <div className="flex justify-end">{children}</div>
+        <div className="flex z-10 justify-end">{children}</div>
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ import { dataSpesification } from "@/constants";
 
 function AccordionProduct() {
   return (
-    <Accordion type="single" collapsible className="w-full">
+    <Accordion type="single" collapsible className="w-full  ">
       <AccordionItem value="item-1">
         <AccordionTrigger className="text-[1rem]">
           About this product
@@ -34,12 +34,14 @@ function AccordionProduct() {
               {dataSpesification.map((item, index) => (
                 <tr
                   key={index}
-                  className="flex flex-row items-center text-[0.75rem] sm:text-[0.875rem] "
+                  className="flex flex-row items-start sm:items-center  text-[0.75rem] sm:text-[0.875rem] text-wrap  "
                 >
-                  <td className="font-semibold text-start  w-1/2 px-4 py-2">
+                  <td className="font-semibold text-start  w-3/4 sm:px-4 px-0 py-2">
                     {item.item1}
                   </td>
-                  <td className="w-1/2 px-4 py-2">{item.item2}</td>
+                  <td className="w-1/2 sm:px-4 px-0 text-wrap text-start py-2">
+                    {item.item2}
+                  </td>
                 </tr>
               ))}
             </tbody>

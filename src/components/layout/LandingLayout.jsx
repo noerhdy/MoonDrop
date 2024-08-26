@@ -64,7 +64,10 @@ function LandingLayout() {
 
         <div className="order-3 sm:order-2 w-full sm:w-1/2 sm:sticky top-0 h-screen sm:py-2 py-0 relative">
           <SideHome isMobile={isMobile}>
-            <ButtonCta classname="px-6 bg-zinc-800 hover:bg-zinc-900  text-zinc-200 hover:text-orange-500">
+            <ButtonCta
+              linkPage="/product"
+              classname="sm:px-12 sm:py-6 px-10 py-4"
+            >
               View Details
             </ButtonCta>
           </SideHome>

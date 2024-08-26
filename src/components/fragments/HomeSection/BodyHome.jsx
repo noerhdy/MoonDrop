@@ -4,7 +4,7 @@ import ButtonCta from "../../elements/button/ButtonCta";
 function BodyHome() {
   return (
     <div className=" relative overflow-hidden leading-loose ">
-      <div className="p-[1.1rem] font-semibold h-full text-[1rem] sm:text-[1.2rem]  text-zinc-100 space-y-4">
+      <div className="p-[1.1rem] font-semibold h-full text-[1rem] text-justify sm:text-[1.2rem]  text-zinc-100 space-y-4">
         <p> The Moondrop Space Travel</p>
         <p>
           TWS earbuds deliver high-resolution audio with Bluetooth V5.3, 13mm
@@ -15,7 +15,7 @@ function BodyHome() {
           Cancellation (ANC) for an immersive listening experience.
         </p>
         <div className="w-full flex sm:justify-start justify-end pb-2">
-          <ButtonCta classname="px-12 bg-zinc-800 hover:bg-zinc-900  text-zinc-200 hover:text-orange-500">
+          <ButtonCta linkPage="/about" classname="sm:px-12 sm:py-6 px-10 py-4">
             More
           </ButtonCta>
         </div>

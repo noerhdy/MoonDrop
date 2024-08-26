@@ -1,22 +1,16 @@
-const ButtonCta = (props) => {
-  const { children, classname = "", link } = props;
-  const handleClick = (url) => {
-    window.open(url, "_blank", "noopener,noreferrer");
-  };
+import { Button } from "@/components/ui/button";
+import { NavLink } from "react-router-dom";
+
+const ButtonCta = ({ children, linkPage, classname }) => {
   return (
-    <button
-      onClick={() => handleClick(link)}
-      className={`group flex  py-2 rounded-full   ${classname} transition-all duration-400`}
-    >
-      <div className="relative overflow-hidden z-[1] transition-all duration-200 font-semibold text-[1rem]">
-        <span className="group-hover:translate-y-full inline-block transition-all duration-500">
-          {children}
-        </span>
-        <span className="absolute inset-0 -translate-y-full group-hover:translate-y-0 inline-block transition-all duration-500">
-          {children}
-        </span>
-      </div>
-    </button>
+    <NavLink to={linkPage}>
+      <Button
+        className={`rounded-full font-semibold ${classname}  ease-in-out duration-200 text-[1rem]`}
+        type="submit"
+      >
+        {children}
+      </Button>
+    </NavLink>
   );
 };
 
