@@ -6,6 +6,7 @@ import NavbarSection from "../fragments/NavbarSection";
 
 function MainLayout() {
   const [isMobile, setIsMobile] = useState(false);
+  const [selectedColor, setSelectedColor] = useState("black"); // state awal warna hitam
 
   useEffect(() => {
     const handleResize = () => {
@@ -23,10 +24,8 @@ function MainLayout() {
 
   return (
     <section className="h-screen">
-      {/* start */}
       <div className="flex flex-col sm:flex-row w-full h-full fixed overflow-auto gap-2 px-2">
-        <Outlet />
-        {/* Mobile */}
+        <Outlet context={{ isMobile, selectedColor, setSelectedColor }} />
         {isMobile && (
           <div className="order-1 mb-12 sm:mb-0">
             <NavbarSection />
@@ -34,15 +33,15 @@ function MainLayout() {
         )}
         {isMobile && (
           <div className=" order-last  ">
-            {/* Footer Mobile */}
             <IndexFooter />
-            {/* end Footer Mobile */}
           </div>
         )}
-        {/* end Mobile */}
 
         <div className="order-3 sm:order-2 w-full sm:w-1/2  sm:sticky top-0 h-1/2 sm:h-screen sm:py-2 py-0 relative ">
-          <SideProduct isMobile={isMobile} />
+          <SideProduct
+            isMobile={isMobile}
+            setSelectedColor={setSelectedColor}
+          />
         </div>
       </div>
     </section>

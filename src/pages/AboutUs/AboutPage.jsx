@@ -29,8 +29,6 @@ function AboutPage() {
       {/* Desktop */}
       {!isMobile && (
         <div className="h-svh">
-          <div className="bg-zinc-500 rounded-2xl h-fit mt-2 overflow-hidden"></div>
-
           {/* Footer Desktop */}
           <IndexFooter />
           {/* endFooter Desktop */}

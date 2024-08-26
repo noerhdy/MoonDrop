@@ -2,9 +2,9 @@ import React from "react";
 
 function HeadAbout() {
   return (
-    <section className="relative space-y-2">
-      <div className="overflow-hidden leading-loose bg-zinc-800 w-full h-fit rounded-[1.5rem] ">
-        <div className="p-[1.5rem]  text-justify font-normal h-dvh  text-[0.75rem] sm:text-[1rem]  text-zinc-100 space-y-4">
+    <section className="relative gap-2 flex flex-col">
+      <div className="overflow-hidden leading-loose bg-zinc-800 w-full h-full rounded-[1.5rem] ">
+        <div className="p-[1.5rem] font-normal h-fit text-justify  text-[0.75rem] sm:text-[1rem]  text-zinc-100 space-y-4">
           <h1 className="font-semibold text-[1.2rem]">MOONDROP</h1>
           <p>
             Chengdu Shuiyueyu Technology Co., Ltd. Founded in 2015, this Chinese
