@@ -1,3 +1,31 @@
+import imageProductBlack1 from "../assets/imgProduct/b_1.webp";
+import imageProductBlack2 from "../assets/imgProduct/b_2.webp";
+import imageProductBlack3 from "../assets/imgProduct/b_3.webp";
+import imageProductWhite1 from "../assets/imgProduct/w_1.webp";
+import imageProductWhite2 from "../assets/imgProduct/w_2.webp";
+import imageProductWhite3 from "../assets/imgProduct/w_3.webp";
+
+export const dataProducts = [
+  {
+    id: 1,
+    color: "black",
+    name: "MOONDROP SPACE TRAVEL BLACK",
+    price: 25.99,
+    discountPrice: 29.99,
+    images: [imageProductBlack1, imageProductBlack2, imageProductBlack3], // Array of images for black version
+    slug: "moondrop-space-travel-black",
+  },
+  {
+    id: 2,
+    color: "white",
+    name: "MOONDROP SPACE TRAVEL WHITE",
+    price: 24.99,
+    discountPrice: 28.99,
+    images: [imageProductWhite1, imageProductWhite2, imageProductWhite3], // Array of images for white version
+    slug: "moondrop-space-travel-white",
+  },
+];
+
 export const dataSpesification = [
   {
     id: 1,

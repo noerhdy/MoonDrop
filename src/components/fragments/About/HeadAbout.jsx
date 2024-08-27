@@ -2,8 +2,8 @@ import React from "react";
 
 function HeadAbout() {
   return (
-    <section className="relative gap-2 flex flex-col">
-      <div className="overflow-hidden leading-loose bg-zinc-800 w-full sm:h-dvh h-fit rounded-[1.5rem] flex flex-col justify-center items-center">
+    <section className="relative gap-2 flex flex-col ">
+      <div className="overflow-hidden leading-loose bg-zinc-800 w-full sm:h-dvh   h-fit rounded-[1.5rem] flex flex-col justify-center items-center">
         <div className="p-[1.5rem] font-normal h-fit text-justify  text-[0.75rem] sm:text-[1rem]  text-zinc-100 space-y-4 ">
           <h1 className="font-semibold text-[1.5rem]">MOONDROP</h1>
           <p>
