@@ -1,9 +1,22 @@
 import React from "react";
 import AccordionProduct from "./AccordionProduct";
 import { Button } from "@/components/ui/button";
+import { useSelector, useDispatch } from "react-redux";
+import { addtoCart } from "@/stores/Cart";
 
 // Pastikan untuk menambahkan price ke props
-function HeadProduct({ selectedColor, price, discountPrice }) {
+function HeadProduct({ selectedColor, price, discountPrice, id }) {
+  const carts = useSelector((store) => store.cart.items);
+  console.log(carts);
+  const dispatch = useDispatch();
+  const handleAddToCart = () => {
+    dispatch(
+      addtoCart({
+        productId: id,
+        quantity: 1,
+      })
+    );
+  };
   return (
     <section className="relative gap-2 flex flex-col h-full sm:h-dvh">
       <div className="overflow-hidden leading-loose bg-zinc-800 w-full h-full rounded-[1.5rem] flex flex-col justify-center items-center">
@@ -36,7 +49,12 @@ function HeadProduct({ selectedColor, price, discountPrice }) {
           </div>
           <div className="flex items-center justify-between">
             <div className="py-8">
-              <Button className="rounded-full px-12 py-6">Add to Cart</Button>
+              <Button
+                onClick={handleAddToCart}
+                className="rounded-full px-12 py-6"
+              >
+                Add to Cart
+              </Button>
             </div>
             <div>
               <p className="text-[0.675rem] sm:text-[0.75rem] text-end leading-snug">

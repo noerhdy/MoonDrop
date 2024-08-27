@@ -9,6 +9,7 @@ function ProductPage() {
   const product = dataProducts.find((p) => p.slug.includes(selectedColor));
   const price = product ? product.price : 24.99; // Default price jika produk tidak ditemukan
   const discountPrice = product ? product.discountPrice : 29.99;
+  const productId = product ? product.id : null;
 
   return (
     <div className="order-4 sm:order-2 w-full sm:w-1/2 sm:h-full h-fit sm:py-2 py-0 ">
@@ -16,6 +17,7 @@ function ProductPage() {
         selectedColor={selectedColor}
         price={price}
         discountPrice={discountPrice}
+        id={productId}
       />
       {/* Desktop */}
       {!isMobile && (

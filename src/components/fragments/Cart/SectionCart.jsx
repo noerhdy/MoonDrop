@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import DetailCart from "./DetailCart";
 
 function CartSection() {
   return (
@@ -10,6 +11,7 @@ function CartSection() {
               <h1 className="font-semibold text-[1.2rem]">Cart</h1>
             </div>
           </div>
+          <DetailCart />
           <div className="flex items-center py-2 justify-between border-t-2">
             <div className="">
               <h1 className="font-semibold text-[1rem]">Your Cart is empty</h1>
