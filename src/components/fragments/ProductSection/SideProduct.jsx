@@ -5,7 +5,7 @@ import "swiper/css";
 import NavbarSection from "../NavbarSection";
 import { dataProducts } from "@/constants"; // Sesuaikan dengan path ke file dataProducts
 
-const SideProduct = ({ ilgobile, setSelectedColor }) => {
+const SideProduct = ({ isMobile, setSelectedColor }) => {
   const [selectedColor, setSelectedColorState] = useState("black");
 
   // Filter produk berdasarkan warna yang dipilih
@@ -21,7 +21,7 @@ const SideProduct = ({ ilgobile, setSelectedColor }) => {
 
   return (
     <div className="w-full h-full rounded-[1.5rem] relative overflow-hidden">
-      {!ilgobile && (
+      {!isMobile && (
         <div className="absolute h-auto top-5 w-full">
           <div className="flex flex-col justify-center">
             <NavbarSection />

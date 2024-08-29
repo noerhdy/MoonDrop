@@ -1,13 +1,12 @@
+import ScrollToTop from "@/components/fragments/ScrollToTop";
 import MainLayout from "../../components/layout/MainLayout";
 import "../index.css";
 
 function HomePage() {
   return (
     <>
-      <section>
-        <div className="relative">
-          <MainLayout />
-        </div>
+      <section className="relative bg-[#f8f8f8]">
+        <MainLayout />
       </section>
     </>
   );

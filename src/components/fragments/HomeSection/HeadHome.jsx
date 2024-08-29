@@ -1,16 +1,25 @@
 import React, { useState, useEffect } from "react";
 
-function HeadHome() {
-  // Array gambar yang akan dipilih secara acak
-  const images = ["./21.jpg", "./23.jpg", "./24.jpg"];
+// Array gambar yang akan dipilih secara acak
+const images = ["./23.jpg", "./24.jpg"];
 
-  // State untuk menyimpan gambar yang dipilih
+// Array teks yang akan dipilih secara acak
+const texts = [
+  "Elevate Your Sound to Galactic Heights",
+  "Experience the Cosmos in Every Note",
+  "Navigate Space with Unmatched Audio Precision",
+  "Accurate Performance Wireless Experience",
+];
+
+function HeadHome() {
+  // State untuk menyimpan gambar dan teks yang dipilih
   const [currentImage, setCurrentImage] = useState("");
+  const [currentText, setCurrentText] = useState("");
 
   useEffect(() => {
-    // Pilih gambar secara acak dari array
-    const randomImage = images[Math.floor(Math.random() * images.length)];
-    setCurrentImage(randomImage);
+    // Pilih gambar dan teks secara acak dari array
+    setCurrentImage(images[Math.floor(Math.random() * images.length)]);
+    setCurrentText(texts[Math.floor(Math.random() * texts.length)]);
   }, []);
 
   return (
@@ -21,11 +30,10 @@ function HeadHome() {
         alt="HeadImage"
       />
       <div className="absolute top-0 h-full w-full flex flex-col justify-between p-6">
-        <h2 className="font-semibold text-[1.75rem] sm:text-5xl text-zinc-50">
-          Accurate Performance <br />
-          Wireless Experience
+        <h2 className="font-semibold text-[1.75rem] sm:text-5xl text-zinc-50  antialiased">
+          {currentText}
         </h2>
-        <h2 className="font-bold text-[3rem] sm:text-7xl  text-zinc-50">
+        <h2 className="font-bold text-[3rem] sm:text-7xl text-zinc-50">
           MOONDROP
         </h2>
       </div>

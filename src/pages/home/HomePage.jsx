@@ -4,10 +4,8 @@ import "../index.css";
 function HomePage() {
   return (
     <>
-      <section>
-        <div className="relative">
-          <LandingLayout />
-        </div>
+      <section className="relative bg-[#f8f8f8]">
+        <LandingLayout />
       </section>
     </>
   );
