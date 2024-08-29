@@ -12,7 +12,7 @@ function ProductPage() {
   const productId = product ? product.id : null;
 
   return (
-    <div className="order-4 sm:order-2 w-full sm:w-1/2 sm:h-full h-fit sm:py-2 py-0 ">
+    <div className="order-4 lg:order-2 w-full lg:w-1/2 lg:h-full h-fit lg:py-2 py-0 ">
       <HeadProduct
         selectedColor={selectedColor}
         price={price}

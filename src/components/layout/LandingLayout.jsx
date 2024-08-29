@@ -9,7 +9,7 @@ function LandingLayout() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 640); // Menentukan batas ukuran mobile, di sini 640px (sm)
+      setIsMobile(window.innerWidth < 1024); // Menentukan batas ukuran mobile, di sini 1024px
     };
 
     handleResize();
@@ -24,8 +24,8 @@ function LandingLayout() {
   return (
     <section className="h-dvh">
       {/* start */}
-      <div className="flex flex-col sm:flex-row w-full h-full fixed overflow-auto gap-2 px-2">
-        <div className="order-2 sm:order-2 w-full sm:w-1/2 h-full sm:py-2 py-0 ">
+      <div className="flex flex-col lg:flex-row w-full h-full fixed overflow-auto gap-2 px-2">
+        <div className="order-2 lg:order-2 w-full lg:w-1/2 h-full lg:py-2 py-0 ">
           <HeadHome />
 
           {/* Desktop */}
@@ -45,7 +45,7 @@ function LandingLayout() {
 
         {/* Mobile */}
         {isMobile && (
-          <div className=" order-1 sm:mb-0 mb-16 ">
+          <div className=" order-1 lg:mb-0 mb-16 ">
             <NavbarSection />
           </div>
         )}
@@ -62,11 +62,11 @@ function LandingLayout() {
         )}
         {/* end Mobile */}
 
-        <div className="order-3 sm:order-2 w-full sm:w-1/2 sm:sticky top-0  sm:py-2 py-0 relative">
+        <div className="order-3 lg:order-2 w-full lg:w-1/2 lg:sticky top-0  lg:py-2 py-0 relative">
           <SideHome isMobile={isMobile}>
             <ButtonCta
               linkPage="/product"
-              classname="sm:px-12 sm:py-6 px-10 py-4"
+              classname="lg:px-12 lg:py-6 px-10 py-4"
             >
               View Details
             </ButtonCta>

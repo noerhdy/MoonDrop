@@ -16,17 +16,17 @@ const images = [
   { src: "img/img product/w_1.webp", alt: "Slide 6" },
 ];
 
-const SideHome = ({ isMobile, children }) => {
+const SideHome = ({ imdobile, children }) => {
   return (
     <div className="w-full h-full rounded-[1.5rem] relative  overflow-hidden">
-      {!isMobile && (
+      {!imdobile && (
         <div className="absolute h-auto top-5  w-full ">
           <div className="flex flex-col justify-center ">
             <NavbarSection />
           </div>
         </div>
       )}
-      <div className="flex justify-center flex-col relative items-center overflow-hidden rounded-[1.5rem]">
+      <div className="flex justify-center flex-col relative h-full  items-center overflow-hidden rounded-[1.5rem]">
         <Swiper
           modules={[Scrollbar, A11y, Autoplay]}
           slidesPerView={1}
@@ -38,9 +38,9 @@ const SideHome = ({ isMobile, children }) => {
         >
           {images.map((image, index) => (
             <SwiperSlide key={index}>
-              <div className="relative w-full h-full overflow-hidden ">
+              <div className="relative w-full h-full flex items-center justify-center overflow-hidden ">
                 <img
-                  className="w-full h-full aspect-square object-cover "
+                  className="w-full h-full m-12 md:m-0 bg-center object-cover "
                   src={image.src}
                   alt={image.alt}
                 />
@@ -51,7 +51,7 @@ const SideHome = ({ isMobile, children }) => {
       </div>
       <div className="absolute top-0 h-full w-full flex flex-col justify-between p-6">
         <h2 className="font-semibold text-5xl text-zinc-950"></h2>
-        <h2 className="font-bold text-[2rem] sm:text-7xl text-black">
+        <h2 className="font-bold text-[2rem] md:text-7xl text-black">
           {/* Product Section */}
         </h2>
         <div className="flex z-10 justify-end">{children}</div>

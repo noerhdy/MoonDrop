@@ -5,7 +5,7 @@ import "swiper/css";
 import NavbarSection from "../NavbarSection";
 import { dataProducts } from "@/constants"; // Sesuaikan dengan path ke file dataProducts
 
-const SideProduct = ({ isMobile, setSelectedColor }) => {
+const SideProduct = ({ ilgobile, setSelectedColor }) => {
   const [selectedColor, setSelectedColorState] = useState("black");
 
   // Filter produk berdasarkan warna yang dipilih
@@ -21,7 +21,7 @@ const SideProduct = ({ isMobile, setSelectedColor }) => {
 
   return (
     <div className="w-full h-full rounded-[1.5rem] relative overflow-hidden">
-      {!isMobile && (
+      {!ilgobile && (
         <div className="absolute h-auto top-5 w-full">
           <div className="flex flex-col justify-center">
             <NavbarSection />
@@ -41,7 +41,7 @@ const SideProduct = ({ isMobile, setSelectedColor }) => {
             <SwiperSlide key={index}>
               <div className="relative w-full h-full  bg-[#e3e3e3] flex items-center justify-center overflow-hidden">
                 <img
-                  className="w-full h-full m-12 sm:m-0 object-cover bg-center"
+                  className="w-full h-full m-12 lg:m-0 object-cover bg-center"
                   src={src}
                   alt={`Image ${index + 1}`}
                 />
@@ -49,7 +49,7 @@ const SideProduct = ({ isMobile, setSelectedColor }) => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="absolute bottom-1 sm:bottom-10 z-10 space-x-2">
+        <div className="absolute bottom-1 lg:bottom-10 z-10 space-x-2">
           {/* Button untuk mengubah warna */}
           <button
             onClick={() => handleColorChange("black")}

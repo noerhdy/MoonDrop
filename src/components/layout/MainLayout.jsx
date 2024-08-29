@@ -11,7 +11,7 @@ function MainLayout() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 640); // Menentukan batas ukuran mobile, di sini 640px (sm)
+      setIsMobile(window.innerWidth < 1024); // Menentukan batas ukuran mobile, di sini 640px (sm)
     };
 
     handleResize();
@@ -26,10 +26,10 @@ function MainLayout() {
   return (
     <section className="h-screen">
       <ScrollToTop />
-      <div className="flex flex-col sm:flex-row w-full h-full fixed overflow-auto gap-2 px-2">
+      <div className="flex flex-col lg:flex-row w-full h-full fixed overflow-auto gap-2 px-2">
         <Outlet context={{ isMobile, selectedColor, setSelectedColor }} />
         {isMobile && (
-          <div className="order-1 mb-16 sm:mb-0">
+          <div className="order-1 mb-16 lg:mb-0">
             <NavbarSection />
           </div>
         )}
@@ -39,7 +39,7 @@ function MainLayout() {
           </div>
         )}
 
-        <div className="order-3 sm:order-2 w-full sm:w-1/2  sm:sticky top-0 h-1/2 sm:h-screen sm:py-2 py-0 relative ">
+        <div className="order-3 lg:order-2 w-full lg:w-1/2  lg:sticky top-0 h-1/2 lg:h-screen lg:py-2 py-0 relative ">
           <SideProduct
             isMobile={isMobile}
             setSelectedColor={setSelectedColor}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ButtonNav from "../elements/button/ButtonNav";
 import { useSelector } from "react-redux";
+
 function NavbarSection() {
   const [totalQuantity, setTotalQuanity] = useState(0);
   const carts = useSelector((store) => store.cart.items);
@@ -11,8 +12,8 @@ function NavbarSection() {
   }, [carts]);
 
   return (
-    <nav className="fixed left-2 sm:right-0 sm:left-0 right-2   bg-clip-padding backdrop-filter whitespace-nowrap backdrop-blur-xl bg-opacity-50 sm:bg-transparent bg-black sm:top-0 top-0 py-2 border  border-zinc-100/10 sm:relative z-50 my-2 rounded-[1.5rem] ">
-      <div className="flex sm:justify-end gap-0 sm:gap-2 justify-evenly   ">
+    <nav className="fixed left-2 lg:right-0 lg:left-0 right-2   bg-clip-padding backdrop-filter whitespace-nowrap backdrop-blur-xl bg-opacity-50 lg:bg-transparent bg-black lg:top-0 top-0 py-2 border  border-zinc-100/10 lg:relative z-50 my-2 rounded-[1.5rem] ">
+      <div className="flex lg:justify-end gap-0 lg:gap-2 justify-evenly   ">
         <ButtonNav linkPage="/" classname="active-class">
           Home
         </ButtonNav>
