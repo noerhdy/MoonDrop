@@ -19,7 +19,7 @@
   height: 100%;
   width: 100%;
   position: relative;
-  background: var(--swiper-scrollbar-drag-bg-color, #ff6600);
+  background: var(--swiper-scrollbar-drag-bg-color, #1b1b1b);
   border-radius: var(--swiper-scrollbar-border-radius, 10px);
   left: 0;
   top: 0;

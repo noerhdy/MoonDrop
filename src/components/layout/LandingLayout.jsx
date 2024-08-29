@@ -45,7 +45,7 @@ function LandingLayout() {
 
         {/* Mobile */}
         {isMobile && (
-          <div className=" order-1 sm:mb-0 mb-16">
+          <div className=" order-1 sm:mb-0 mb-16 ">
             <NavbarSection />
           </div>
         )}
