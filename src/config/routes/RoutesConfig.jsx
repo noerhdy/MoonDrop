@@ -4,10 +4,12 @@ import MainPage from "../../pages/home/MainPage";
 import ProductPage from "../../pages/product/ProductPage";
 import AboutPage from "../../pages/AboutUs/AboutPage";
 import CartPage from "../../pages/Cart/CartPage";
+import ScrollToTop from "@/components/fragments/ScrollToTop";
 
 const RoutesConfig = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route index element={<HomePage />} />
         <Route path="/" element={<MainPage />}>

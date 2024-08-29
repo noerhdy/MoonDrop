@@ -31,7 +31,7 @@ function LandingLayout() {
           {/* Desktop */}
           {!isMobile && (
             <div className="h-screen">
-              <div className="bg-zinc-400 rounded-[1.5rem] h-fit mt-2 overflow-hidden">
+              <div className="bg-[#e2e2e2] rounded-[1.5rem] h-fit mt-2 overflow-hidden">
                 <BodyHome />
               </div>
 
@@ -51,7 +51,7 @@ function LandingLayout() {
         )}
         {isMobile && (
           <div className=" order-last  ">
-            <div className="bg-zinc-400 rounded-[1.5rem] h-fit ">
+            <div className="bg-[#e2e2e2] rounded-[1.5rem] h-fit ">
               <BodyHome />
             </div>
 

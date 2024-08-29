@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import { SideProduct } from "../fragments/IndexProduct";
 import IndexFooter from "../fragments/Footer/IndexFooter";
 import NavbarSection from "../fragments/NavbarSection";
+import ScrollToTop from "../fragments/ScrollToTop";
 
 function MainLayout() {
   const [isMobile, setIsMobile] = useState(false);
@@ -24,10 +25,11 @@ function MainLayout() {
 
   return (
     <section className="h-screen">
+      <ScrollToTop />
       <div className="flex flex-col sm:flex-row w-full h-full fixed overflow-auto gap-2 px-2">
         <Outlet context={{ isMobile, selectedColor, setSelectedColor }} />
         {isMobile && (
-          <div className="order-1 mb-12 sm:mb-0">
+          <div className="order-1 mb-16 sm:mb-0">
             <NavbarSection />
           </div>
         )}

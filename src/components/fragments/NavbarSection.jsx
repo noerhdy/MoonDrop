@@ -11,8 +11,8 @@ function NavbarSection() {
   }, [carts]);
 
   return (
-    <nav className="w-fit fixed left-2 sm:right-0 sm:left-0 right-2 sm:mx-4 mx-auto bg-clip-padding backdrop-filter whitespace-nowrap backdrop-blur-xl bg-opacity-50 sm:bg-transparent bg-black sm:top-0 top-0 sm:relative z-50 my-2 p-1 sm:border-none border border-zinc-500/40 rounded-[1.5rem]">
-      <div className="flex whitespace-nowrap gap-2 sm:justify-end justify-center">
+    <nav className="fixed left-2 sm:right-0 sm:left-0 right-2   bg-clip-padding backdrop-filter whitespace-nowrap backdrop-blur-xl bg-opacity-50 sm:bg-transparent bg-black sm:top-0 top-0 py-2 border  border-zinc-100/10 sm:relative z-50 my-2 rounded-[1.5rem] ">
+      <div className="flex sm:justify-end gap-0 sm:gap-2 justify-evenly   ">
         <ButtonNav linkPage="/" classname="active-class">
           Home
         </ButtonNav>

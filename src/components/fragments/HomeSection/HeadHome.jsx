@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 function HeadHome() {
+  // Array gambar yang akan dipilih secara acak
+  const images = ["./21.jpg", "./23.jpg", "./24.jpg"];
+
+  // State untuk menyimpan gambar yang dipilih
+  const [currentImage, setCurrentImage] = useState("");
+
+  useEffect(() => {
+    // Pilih gambar secara acak dari array
+    const randomImage = images[Math.floor(Math.random() * images.length)];
+    setCurrentImage(randomImage);
+  }, []);
+
   return (
     <div className="w-full h-full rounded-[1.5rem] relative overflow-hidden">
       <img
         className="w-full h-dvh object-cover duration-500 ease-in-out"
-        src="./21.jpg"
+        src={currentImage}
         alt="HeadImage"
       />
       <div className="absolute top-0 h-full w-full flex flex-col justify-between p-6">

@@ -4,7 +4,7 @@ import ButtonCta from "../../elements/button/ButtonCta";
 function BodyHome() {
   return (
     <div className=" relative overflow-hidden leading-loose ">
-      <div className="p-[1.1rem] font-semibold h-full text-[1rem] text-justify sm:text-[1.2rem]  text-zinc-100 space-y-4">
+      <div className="p-[1.1rem] font-semibold h-full text-[1rem] text-justify sm:text-[1.2rem]  text-black space-y-4">
         <p> The Moondrop Space Travel</p>
         <p>
           TWS earbuds deliver high-resolution audio with Bluetooth V5.3, 13mm

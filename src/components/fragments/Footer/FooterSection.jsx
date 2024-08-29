@@ -1,15 +1,24 @@
 import React from "react";
 import ButtonCta from "../../elements/button/ButtonCta";
+import { NavLink } from "react-router-dom";
 
 function FooterSection() {
   return (
     <div className=" p-[1.1rem] h-auto">
       <div className=" font-semibold flex w-full sm:text-[0.875rem] text-[0.675rem] text-white ">
         <div className=" w-1/2 flex flex-col">
-          <span>Home</span>
-          <span>Product</span>
-          <span>About Us</span>
-          <span>Cart</span>
+          <span>
+            <NavLink to="/">Home</NavLink>
+          </span>
+          <span>
+            <NavLink to="/about">About Us</NavLink>
+          </span>
+          <span>
+            <NavLink to="/product">Product</NavLink>
+          </span>
+          <span>
+            <NavLink to="/cart">Cart</NavLink>
+          </span>
         </div>
         <div className=" w-1/2 flex flex-col">
           <span>Facebook</span>

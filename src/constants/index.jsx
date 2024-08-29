@@ -9,7 +9,7 @@ export const dataProducts = [
   {
     id: 1,
     color: "black",
-    name: "MOONDROP SPACE TRAVEL BLACK",
+    name: "MOONDROP SPACE TRAVEL",
     price: 25.99,
     discountPrice: 29.99,
     images: [imageProductBlack1, imageProductBlack2, imageProductBlack3], // Array of images for black version
@@ -18,7 +18,7 @@ export const dataProducts = [
   {
     id: 2,
     color: "white",
-    name: "MOONDROP SPACE TRAVEL WHITE",
+    name: "MOONDROP SPACE TRAVEL",
     price: 24.99,
     discountPrice: 28.99,
     images: [imageProductWhite1, imageProductWhite2, imageProductWhite3], // Array of images for white version
