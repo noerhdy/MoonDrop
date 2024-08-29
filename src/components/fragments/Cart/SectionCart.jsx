@@ -22,8 +22,8 @@ function CartSection() {
 
   return (
     <section className="relative gap-2 flex flex-col h-full">
-      <div className="overflow-hidden leading-loose bg-zinc-400 w-full h-full rounded-[1.5rem] flex flex-col justify-center items-center">
-        <div className="p-[1.5rem] font-normal h-fit w-full text-justify text-[0.75rem] sm:text-[1rem] text-zinc-100">
+      <div className="overflow-hidden leading-loose bg-[#e2e2e2] w-full h-full rounded-[1.5rem] flex flex-col justify-center items-center">
+        <div className="p-[1.5rem] font-normal h-fit w-full text-justify text-[0.75rem] sm:text-[1rem] text-black">
           <div className="flex w-full justify-between items-start">
             <div className="flex text-start flex-col">
               <h1 className="font-semibold text-[2rem]">Cart</h1>
@@ -34,7 +34,7 @@ function CartSection() {
           {carts.length > 0 ? (
             carts.map((item, key) => <CartItem key={key} data={item} />)
           ) : (
-            <div className="flex items-center py-2 justify-between border-t-2">
+            <div className="flex items-center py-2 justify-between border-t-2 border-zinc-600">
               <div className="">
                 <h1 className="font-semibold text-[1rem]">
                   Your Cart is empty
@@ -43,7 +43,7 @@ function CartSection() {
             </div>
           )}
 
-          <div className="flex items-center justify-between border-y-2 py-2">
+          <div className="flex items-center justify-between border-y-2 py-2 border-zinc-600">
             <div className="">
               <h1 className="font-semibold text-[1rem]">Total Shipping</h1>
             </div>

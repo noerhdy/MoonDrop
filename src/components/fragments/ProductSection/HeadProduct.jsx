@@ -19,8 +19,8 @@ function HeadProduct({ selectedColor, price, discountPrice, id }) {
   };
   return (
     <section className="relative gap-2 flex flex-col h-full sm:h-dvh">
-      <div className="overflow-hidden leading-loose bg-zinc-800 w-full h-full rounded-[1.5rem] flex flex-col justify-center items-center">
-        <div className="p-[1.5rem] font-normal h-fit w-full text-justify text-[0.75rem] sm:text-[1rem] text-zinc-100">
+      <div className="overflow-hidden leading-loose bg-[#E2E2E2] w-full h-full rounded-[1.5rem] flex flex-col justify-center items-center">
+        <div className="p-[1.5rem] font-normal h-fit w-full text-justify text-[0.75rem] sm:text-[1rem] text-zinc-950">
           <div className="flex w-full justify-between items-start">
             <div className="flex text-start flex-col">
               <div className="leading-normal">

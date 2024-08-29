@@ -31,7 +31,7 @@ const CartItem = (props) => {
   };
 
   return (
-    <div className="w-full gap-2 flex border-t-2 mx-auto">
+    <div className="w-full gap-2 flex border-t-2 border-zinc-600 mx-auto">
       {/* Gambar Produk */}
       <div className="relative w-32 h-32 flex-shrink-0">
         <img
@@ -52,7 +52,7 @@ const CartItem = (props) => {
             <span>{detail.color}</span>
           </div>
           <div className="flex items-center gap-4">
-            <h1 className="font-semibold text-white text-[1rem]">
+            <h1 className="font-semibold text-black text-[1rem]">
               ${detail.price}
             </h1>
             <p className="font-medium text-[1rem] line-through text-gray-800">
@@ -83,7 +83,7 @@ const CartItem = (props) => {
           <div className="mt-2">
             <button
               type="button"
-              className="text-white font-semibold tex-[1rem]"
+              className="text-black font-semibold tex-[1rem]"
               onClick={handleRemove}
             >
               Remove
