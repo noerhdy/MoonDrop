@@ -62,7 +62,7 @@ function LandingLayout() {
         )}
         {/* end Mobile */}
 
-        <div className="order-3 sm:order-2 w-full sm:w-1/2 sm:sticky top-0 h-screen sm:py-2 py-0 relative">
+        <div className="order-3 sm:order-2 w-full sm:w-1/2 sm:sticky top-0  sm:py-2 py-0 relative">
           <SideHome isMobile={isMobile}>
             <ButtonCta
               linkPage="/product"

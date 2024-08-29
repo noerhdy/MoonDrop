@@ -39,7 +39,7 @@ const SideProduct = ({ isMobile, setSelectedColor }) => {
         >
           {images.map((src, index) => (
             <SwiperSlide key={index}>
-              <div className="relative w-full h-full bg-[#e3e3e3] flex items-center justify-center overflow-hidden">
+              <div className="relative w-full h-full rounded-[1.5rem] bg-[#e3e3e3] flex items-center justify-center overflow-hidden">
                 <img
                   className="w-full h-full object-cover bg-center"
                   src={src}

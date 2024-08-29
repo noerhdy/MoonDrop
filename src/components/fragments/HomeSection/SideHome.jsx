@@ -18,9 +18,9 @@ const images = [
 
 const SideHome = ({ isMobile, children }) => {
   return (
-    <div className="w-full sm:h-full h-full rounded-[1.5rem] relative  overflow-hidden">
+    <div className="w-full h-full rounded-[1.5rem] relative  overflow-hidden">
       {!isMobile && (
-        <div className="absolute h-fit top-5  w-full ">
+        <div className="absolute h-auto top-5  w-full ">
           <div className="flex flex-col justify-center ">
             <NavbarSection />
           </div>
