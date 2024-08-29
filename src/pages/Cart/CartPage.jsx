@@ -7,7 +7,7 @@ function CartPage() {
   const { isMobile, selectedColor } = useOutletContext();
 
   return (
-    <div className="order-4 sm:order-2 w-full sm:w-1/2 sm:h-full h-fit sm:py-2 py-0 ">
+    <div className="order-2 sm:order-2 w-full sm:w-1/2 sm:h-full h-fit sm:py-2 py-0 ">
       <CartSection selectedColor={selectedColor} />
       {/* Desktop */}
       {!isMobile && (

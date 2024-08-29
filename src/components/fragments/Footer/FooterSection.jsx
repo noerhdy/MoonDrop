@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 function FooterSection() {
   return (
-    <div className=" p-[1.1rem] h-auto">
+    <div className=" p-[1.1rem] h-full flex flex-col justify-between">
       <div className=" font-semibold flex w-full sm:text-[0.875rem] text-[0.675rem] text-white ">
         <div className=" w-1/2 flex flex-col">
           <span>
@@ -34,6 +34,9 @@ function FooterSection() {
           enhance sound quality, collaborating with industry leaders and
           academia to drive innovation and fair competition.
         </p>
+      </div>
+      <div className="font-medium flex  justify-end w-full sm:text-[0.875rem] text-[0.675rem] text-zinc-700 mt-12">
+        <p>2024 NN</p>
       </div>
     </div>
   );
