@@ -26,7 +26,7 @@ const SideHome = ({ isMobile, children }) => {
           </div>
         </div>
       )}
-      <div className="flex justify-center flex-col relative items-center overflow-hidden rounded-2xl">
+      <div className="flex justify-center flex-col relative items-center overflow-hidden rounded-[1.5rem]">
         <Swiper
           modules={[Scrollbar, A11y, Autoplay]}
           slidesPerView={1}

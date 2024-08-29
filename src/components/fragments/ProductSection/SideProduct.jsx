@@ -28,7 +28,7 @@ const SideProduct = ({ isMobile, setSelectedColor }) => {
           </div>
         </div>
       )}
-      <div className="flex justify-center h-full flex-col relative items-center overflow-hidden">
+      <div className="flex justify-center rounded-[1.5rem] flex-col relative items-center overflow-hidden">
         <Swiper
           modules={[Scrollbar, A11y, Autoplay]}
           slidesPerView={1}
@@ -39,7 +39,7 @@ const SideProduct = ({ isMobile, setSelectedColor }) => {
         >
           {images.map((src, index) => (
             <SwiperSlide key={index}>
-              <div className="relative w-full h-full rounded-[1.5rem] bg-[#e3e3e3] flex items-center justify-center overflow-hidden">
+              <div className="relative w-full h-full  bg-[#e3e3e3] flex items-center justify-center overflow-hidden">
                 <img
                   className="w-full h-full object-cover bg-center"
                   src={src}
