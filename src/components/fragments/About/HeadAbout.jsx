@@ -46,7 +46,7 @@ function HeadAbout() {
           </div>
           <img
             className=" object-cover w-full h-full sm:aspect-video aspect-square duration-500 ease-in-out"
-            src="./22.jpg"
+            src="./bg_about.jpg"
             alt="HeadImage"
           />
         </div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 // Array gambar yang akan dipilih secara acak
-const images = ["./23.jpg", "./24.jpg"];
+const images = ["./bg_homeW.webp", "./bg_homeB.webp"];
 
 // Array teks yang akan dipilih secara acak
 const texts = [

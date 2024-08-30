@@ -31,15 +31,15 @@ function CartSection() {
   const handleClick = () => {
     if (carts.length === 0) {
       if (showEmptyCartToast) {
-        toast("Your cart is currently empty.");
+        toast.error("Your cart is currently empty.");
         setShowEmptyCartToast(false); // Setel ke false agar tidak menampilkan toast kosong lagi
       }
     } else {
       // Tampilkan toast berbeda berdasarkan jumlah klik
       if (clickCount === 0) {
-        toast("Please Note: This is a Prototype Version.");
+        toast.success("This is a Prototype Version.");
       } else if (clickCount === 1) {
-        toast("Thank You for Stopping By!");
+        toast.success("Thank You for Stopping By!");
       }
 
       // Update jumlah klik
@@ -93,7 +93,7 @@ function CartSection() {
 
           <div className="flex items-center justify-between py-4">
             <div className="py-4">
-              <Toaster position="top-center" />
+              <Toaster theme="dark" position="top-center" />
               <Button
                 onClick={handleClick}
                 className="rounded-full px-12 py-6 text-[1rem]"

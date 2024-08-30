@@ -13,10 +13,10 @@ function HomePage() {
   useEffect(() => {
     if (!hasShownToast) {
       const timeout1 = setTimeout(() => {
-        toast.success("Hello World!");
+        toast.info("Hello World!");
       }, 3000);
       const timeout2 = setTimeout(() => {
-        toast.success("This is a Prototype Website");
+        toast.info("This is a Prototype Website");
         dispatch(setToastShown(true)); // Perbarui status untuk mencegah toast memuat kembali saaat berpindah halaman ke home
       }, 5000);
 
