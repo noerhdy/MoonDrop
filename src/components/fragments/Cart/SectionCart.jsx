@@ -1,7 +1,9 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import CartItem from "./CartItem";
 import { useSelector } from "react-redux";
 import { dataProducts } from "@/constants"; // Pastikan import dataProducts
+import { toast, Toaster } from "sonner";
 
 function CartSection() {
   const carts = useSelector((store) => store.cart.items);
@@ -19,6 +21,41 @@ function CartSection() {
     }
     return acc;
   }, 0);
+
+  // State untuk melacak jumlah klik button
+  const [clickCount, setClickCount] = useState(0);
+
+  // State untuk menampilkan toast kosong
+  const [showEmptyCartToast, setShowEmptyCartToast] = useState(true);
+
+  const handleClick = () => {
+    if (carts.length === 0) {
+      if (showEmptyCartToast) {
+        toast("Your cart is currently empty.");
+        setShowEmptyCartToast(false); // Setel ke false agar tidak menampilkan toast kosong lagi
+      }
+    } else {
+      // Tampilkan toast berbeda berdasarkan jumlah klik
+      if (clickCount === 0) {
+        toast("Please Note: This is a Prototype Version.");
+      } else if (clickCount === 1) {
+        toast("Thank You for Stopping By!");
+      }
+
+      // Update jumlah klik
+      setClickCount((prevCount) => prevCount + 1);
+
+      // Reset status untuk menampilkan toast kosong jika ada item di keranjang
+      setShowEmptyCartToast(true);
+    }
+  };
+
+  useEffect(() => {
+    if (carts.length > 0) {
+      // Reset status untuk menampilkan toast kosong jika ada item di keranjang
+      setShowEmptyCartToast(true);
+    }
+  }, [carts]);
 
   return (
     <section className="relative gap-2 flex flex-col h-full">
@@ -56,7 +93,11 @@ function CartSection() {
 
           <div className="flex items-center justify-between py-4">
             <div className="py-4">
-              <Button className="rounded-full px-12 py-6 text-[1rem]">
+              <Toaster position="top-center" />
+              <Button
+                onClick={handleClick}
+                className="rounded-full px-12 py-6 text-[1rem]"
+              >
                 Check Out
               </Button>
             </div>

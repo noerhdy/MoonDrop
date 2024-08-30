@@ -1,4 +1,3 @@
-import ScrollToTop from "@/components/fragments/ScrollToTop";
 import MainLayout from "../../components/layout/MainLayout";
 import "../index.css";
 
