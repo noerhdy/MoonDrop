@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Skeleton from "react-loading-skeleton";
 
 // Array gambar yang akan dipilih secara acak
 const images = ["./bg_homeW.webp", "./bg_homeB.webp"];
@@ -15,6 +16,7 @@ function HeadHome() {
   // State untuk menyimpan gambar dan teks yang dipilih
   const [currentImage, setCurrentImage] = useState("");
   const [currentText, setCurrentText] = useState("");
+  const [imageLoaded, setImageLoaded] = useState(false); // State untuk melacak apakah gambar sudah dimuat
 
   useEffect(() => {
     // Pilih gambar dan teks secara acak dari array
@@ -22,12 +24,22 @@ function HeadHome() {
     setCurrentText(texts[Math.floor(Math.random() * texts.length)]);
   }, []);
 
+  // Fungsi untuk menangani ketika gambar selesai dimuat
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
   return (
     <div className="w-full h-full rounded-[1.5rem] relative overflow-hidden">
+      {!imageLoaded && <Skeleton className="w-full h-dvh rounded-[1.5rem]" />}
       <img
-        className="w-full h-dvh object-cover duration-500 ease-in-out"
+        className={`w-full h-dvh object-cover duration-500 ease-in-out ${
+          imageLoaded ? "opacity-100" : "opacity-0"
+        }`}
         src={currentImage}
         alt="HeadImage"
+        loading="lazy"
+        onLoad={handleImageLoad}
       />
       <div className="absolute top-0 h-full w-full flex flex-col justify-between p-6">
         <h2 className="font-semibold text-[1.75rem] sm:text-5xl text-zinc-50  antialiased">

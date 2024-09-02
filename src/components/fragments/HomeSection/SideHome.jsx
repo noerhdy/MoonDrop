@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Scrollbar, A11y, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import NavbarSection from "../NavbarSection";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 // Import gambar dari assets
 import imageProductBlack1 from "@/assets/imgProduct/b_1.webp";
@@ -25,6 +27,19 @@ const images = [
 ];
 
 const SideHome = ({ isMobile, children }) => {
+  // State untuk melacak gambar mana yang telah dimuat
+  const [loadedImages, setLoadedImages] = useState(
+    Array(images.length).fill(false)
+  );
+
+  const handleImageLoad = (index) => {
+    setLoadedImages((prevLoadedImages) => {
+      const newLoadedImages = [...prevLoadedImages];
+      newLoadedImages[index] = true;
+      return newLoadedImages;
+    });
+  };
+
   return (
     <div className="w-full h-full rounded-[1.5rem] relative overflow-hidden">
       {!isMobile && (
@@ -47,10 +62,17 @@ const SideHome = ({ isMobile, children }) => {
           {images.map((image, index) => (
             <SwiperSlide key={index}>
               <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+                {!loadedImages[index] && (
+                  <Skeleton className="w-full h-full m-12 md:m-0 bg-center object-cover" />
+                )}
                 <img
-                  className="w-full h-full m-12 md:m-0 bg-center object-cover"
+                  className={`w-full h-full m-12 md:m-0 bg-center object-cover transition-opacity duration-500 ${
+                    loadedImages[index] ? "opacity-100" : "opacity-0"
+                  }`}
                   src={image.src}
                   alt={image.alt}
+                  loading="lazy"
+                  onLoad={() => handleImageLoad(index)}
                 />
               </div>
             </SwiperSlide>
