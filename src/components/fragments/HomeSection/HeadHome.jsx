@@ -31,7 +31,7 @@ function HeadHome() {
   return (
     <div className="w-full h-full rounded-[1.5rem] relative overflow-hidden">
       <img
-        className={`w-full h-dvh object-cover duration-500 ease-in-out ${
+        className={`w-full h-full object-cover duration-500 rounded-[1.5rem] ease-in-out ${
           imageLoaded ? "opacity-100" : "opacity-0"
         }`}
         src={currentImage}
