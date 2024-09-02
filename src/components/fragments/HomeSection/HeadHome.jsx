@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Skeleton from "react-loading-skeleton";
 
 // Array gambar yang akan dipilih secara acak
 const images = ["./bg_homeW.webp", "./bg_homeB.webp"];
@@ -31,7 +30,6 @@ function HeadHome() {
 
   return (
     <div className="w-full h-full rounded-[1.5rem] relative overflow-hidden">
-      {!imageLoaded && <Skeleton className="w-full h-dvh rounded-[1.5rem]" />}
       <img
         className={`w-full h-dvh object-cover duration-500 ease-in-out ${
           imageLoaded ? "opacity-100" : "opacity-0"
